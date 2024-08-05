@@ -31,7 +31,7 @@ This project was developed during the Smart India Hackathon to help users mainta
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/fithub-website.git
+    git clone https://github.com/Vasu-04/fithub-website.git
     ```
 2. Navigate to the project directory:
     ```bash
