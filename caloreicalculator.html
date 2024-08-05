@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bmi/bmi.css">
+    <title>Calorie Calculator</title> 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/tooplate-gymso-style.css">
+</head>
+<body>
+
+  <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg fixed-top" style = "border-bottom: solid 3px rgb(254, 97, 123);">
+        <div class="container" >
+
+            <a class="navbar-brand" href="index.html">FitHub</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link smoothScroll">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="index.html#class" class="nav-link smoothScroll">Guide</a>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link smoothScroll">Contact</a>
+                    </li>
+                </ul>
+
+                <ul class="social-icon ml-lg-3">
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#"><img src="images/download.webp" alt="" class="imghai" height="25" width="25"></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <div style = "display:block;">
+      <div style = "padding-top: 50px; background-color: black; height: 190px; border-bottom: solid 5px black;color: white;">
+        <center><h1>CALORIE Calculator</h1></center>
+      </div>
+      <div style = " border-bottom: solid 5px black;;background-color: white; padding: 20PX; text-align: justify; text-align-last: CENTER;">
+        <p>"Our Calorie Calculator evaluates your daily caloric needs based on your age, gender, weight, height, and activity level. Simply input these details, and instantly receive a tailored calorie intake recommendation."</p>
+      </div>
+
+        
+
+
+
+
+      <div style="background-image: url(/images/class/istockphoto-483902020-612x612.jpg);">
+        <center>
+        <br>
+          <div class="container">
+          <div class="row">
+            <div class="col-lg-6 mx-auto">
+              <div class="card card-body text-center mt-5" style = "border: solid 5px rgb(0,0,0,0.8)">
+                <!-- <h1 class="heading display-5 pb-3">Calorie Calculator</h1> -->
+                <form id="calorie-form">
+    
+                  <div class="form-group row">
+                    <label for="age" class="col-sm-2 col-form-label" style = "padding-top: 25px; font-size: larger;">Age</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="age" placeholder="15-80">
+                    </div>
+                  </div>
+    
+                  <fieldset class="form-group">
+                    <div class="row" >
+                      <legend class="col-form-label col-sm-2 upt-0" style = "padding-left: 5px; font-size: larger;">Gender</legend>
+                      <div class="col-sm-10" id="form-radio">
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="male" name="customRadioInline1" class="custom-control-input" checked="checked">
+                          <label class="custom-control-label" for="male">Male</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="female" name="customRadioInline1" class="custom-control-input">
+                          <label class="custom-control-label" for="female">Female</label>
+                        </div>  
+                      </div>
+                    </div> 
+                  </fieldset> 
+    
+                  <div class="form-group row">
+                    <label for="weight" class="col-sm-2 col-form-label">Weight</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="weight" placeholder="In kilograms">
+                    </div>
+                  </div>
+    
+                  <div class="form-group row">
+                    <label for="height" class="col-sm-2 col-form-label">Height</label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="height" placeholder="In centimeters">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <legend class="col-form-label col-sm-2 pt-0">Activity</legend>
+                    <select class="custom-select col-sm-10" id="list">
+                      <option selected value="1">Sedentary (little or no exercise)</option>
+                      <option value="2">Lightly active (light exercise/sports 1-3 days/week)</option>
+                      <option value="3">Moderately active (moderate exercise/sports 3-5 days/week)</option>
+                      <option value="4">Very active (hard exercise/sports 6-7 days a week)</option>
+                      <option value="5">Extra active (very hard exercise/sports & physical job or 2x training)</option>
+                    </select>
+                  </div>
+    
+                  <div class="form-group">
+                    <input type="submit" value="Calculate" class="btn btn-dark btn-block">
+                  </div>
+    
+                </form>
+    
+                <div id="loading">
+                  <img src="New_Calorie_calculatorr/img/Loading.gif" alt="">
+                </div>
+    
+                <div id="results" class="pt-4">
+                  <h5>Total Calories</h5>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input type="number" class="form-control" id="total-calories" disabled>
+                    </div>
+                  </div>                       
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </center>
+        <br>
+      </div>
+
+
+
+
+
+
+
+      <div style = "border-bottom:solid 5px black ; background-color: white; display: flex;">
+          <div style = "padding: 20px;">
+            <img src="/images/class/calories-1200x912.jpg" width = "300px">
+          </div>
+          <DIV>
+          <p style="padding: 20px; text-align: justify;">It assesses your specific metabolic rate. Using this data, the calculator then estimates your daily caloric needs. Whether you're sedentary or highly active, it adjusts to provide an accurate intake recommendation. The result empowers users with informed dietary choices, ensuring they align with their fitness goals. Trust Fithub to guide your nutrition, making every calorie count.The human body needs calories to survive. Without energy, the cells in the body would die, the heart and lungs would stop, and the organs would not be able to carry out the basic processes needed for living. People absorb this energy from food and drink.The number of calories in food tells us how much potential energy they contain. It is not only calories that are important, but also the substance from which the calories are taken.</p>
+        </DIV>
+      </div>
+
+      <div style = "background-color: black; padding:20px ; display: flex;">
+        <div style = "width:60%">
+          <div style = "padding:30px ; display:flex; ">
+            <!-- <div style = " color: rgb(254, 97, 123); font-size: 40px;">
+              <i class = "fa fa-phone " ></i>
+            </div> -->
+            <div >
+              <p style = " color: rgb(254, 97, 123); text-decoration: solid 3px rgb(254, 97, 123) underline ; font-size: 40px; padding-left: 20px;">Contact</p>
+            </div>
+          </div>
+  
+          <div style = " padding: 20px 50px ; display: flex;">
+            <div ">
+              <p style = "font-size: 20px; color: white; text-decoration: solid 1px white underline;"><i class = "fa fa-phone"></i>
+                010-020-0840</p>
+              <p style = "font-size: 20px; color: white;text-decoration: solid 1px white underline;"><i class = "fa fa-envelope"></i>
+                GymJam@gmail.com</p>
+              <p style = "font-size: 20px; color: white;text-decoration: solid 1px white underline;"><i class = "fa fa-map-marker"></i>
+                Outer Ring Rd, AU Block, Ranikhet, Pitampura, New Delhi, Delhi, 110034</p>
+            </div>
+        </div></div>
+        
+          <div style = "padding-top: 40px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.9418702511907!2d77.13919537497593!3d28.721283175616417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0170e8096b31%3A0x9a906c658b08a033!2sVivekananda%20Institute%20of%20Professional%20Studies!5e0!3m2!1sen!2sin!4v1695470455661!5m2!1sen!2sin" frameborder="0" style="width:160%;border: solid 4px rgb(254, 97, 123); height :80% ;allowfullscreen=""></iframe>
+          </div>
+        </div>
+        <footer class="site-footer"  style="background-color:var(--white-color) ;">
+          <div class="container">
+               <div class="row" >
+
+                    <div class="ml-auto col-lg-4 col-md-5" >
+                        <p class="copyright-text" style = "text-align: right;">Copyright &copy; GymJam Coders.
+                        
+                        
+                    </div>
+
+                    
+                    
+               </div>
+          </div>
+     </footer>
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+   
+
+    
+
+      
+      
+
+
+
+
+    
+    <div id="myModal" class="modal">
+     
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+    
+<script src="bmi/bmi.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+  <body class="bg-dark">
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="calorie/app.js"></script>
+  </body>
+</html> -->

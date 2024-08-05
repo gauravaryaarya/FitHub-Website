@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bmi/bmi.css">
+    <title>BMI Calculator</title> 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/tooplate-gymso-style.css">
+</head>
+<body>
+
+  <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg fixed-top" style = "border-bottom: solid 3px rgb(254, 97, 123);">
+        <div class="container" >
+
+            <a class="navbar-brand" href="index.html">FitHub</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link smoothScroll">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="index.html#class" class="nav-link smoothScroll">Guide</a>
+                    </li>
+
+
+
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link smoothScroll">Contact</a>
+                    </li>
+                </ul>
+
+                <ul class="social-icon ml-lg-3">
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                    <li><a href="#"><img src="images/download.webp" alt="" class="imghai" height="25" width="25"></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <div style = "display:block;">
+      <div style = "padding-top: 50px; background-color: black; height: 190px; border-bottom: solid 5px black;color: white;">
+        <center><h1>BMI Calculator</h1></center>
+      </div>
+      <div style = " border-bottom: solid 5px black;;background-color:rgb(0,0,0,0.05);">
+        <p>The <strong>Body Mass Index (BMI) Calculator</strong> can be used to calculate BMI value and corresponding weight status while taking age into consideration. Use the "Metric Units" tab for the International System of Units or the "Other Units" tab to convert units into either US or metric units. Note that the calculator also computes the Ponderal Index in addition to BMI, both of which are discussed below in detail.</p>
+      </div>
+
+      <div style="background-image: url(/images/class/Battlerope.jpg);">
+        <center>
+        <br>
+        <div class="container" > 
+          <div class="box" style = "background-color: rgba(0,0,0,1); border-radius: 20px; border:solid 4px rgb(254, 97, 123)">
+            <br><br>
+            <div class="content">
+  
+  
+              <div class="input">
+                  <label for="height">Age</label>
+                  <input type="text" class="text-input" id="age" autocomplete="off" required/>
+              </div>
+  
+              <div class="gender">
+  
+                  <label class="container" >
+                      <input type="radio" name="radio" id="m"><p class="text" style="width: 100px;color: white;">Male</p>
+                      <span class="checkmark"></span>
+                    </label>
+  
+  
+                  <label class="container">
+                      <input type="radio" name="radio" id="f" ><p class="text" style="width: 120px; color: white;">Female</p>
+                        <span class="checkmark"></span>
+                      </label>
+              </div>
+  
+              <div class="containerHW">
+              <div class="inputH">
+                <label for="height">Height(cm)</label>
+                <input type="number" id="height" min="0" required>
+              </div>
+  
+              <div class="inputW">
+                <label for="weight">Weight(kg)</label>
+                <input type="number" id="weight" min="0" required>
+              </div>
+            </div>
+  
+              <button class="calculate" id="submit" onclick="calculate();">Calculate BMI</button>
+            </div>
+            <div class="result">
+              <p>Your BMI is</p>
+              <div id="result">00.00</div>
+              <p class="comment" style = "color: white;"></p>
+            </div>
+          </div>
+        </div>
+        </center>
+        <br>
+      </div>
+
+
+      <div style = "border-bottom:solid 5px black ;">
+        <p style="padding: 20px; text-align: justify;">BMI is a measurement of a person's leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. It is widely used as a general indicator of whether a person has a healthy body weight for their height. Specifically, the value obtained from the calculation of BMI is used to categorize whether a person is underweight, normal weight, overweight, or obese depending on what range the value falls between. These ranges of BMI vary based on factors such as region and age, and are sometimes further divided into subcategories such as severely underweight or very severely obese. Being overweight or underweight can have significant health effects, so while BMI is an imperfect measure of healthy body weight, it is a useful indicator of whether any additional testing or action is required. Refer to the table below to see the different categories based on BMI that are used by the calculator.</p>
+              </div>
+
+      <div style = "background-color: black; padding:20px ; display: flex;">
+        <div style = "width:60%">
+          <div style = "padding:30px ; display:flex; ">
+            <!-- <div style = " color: rgb(254, 97, 123); font-size: 40px;">
+              <i class = "fa fa-phone " ></i>
+            </div> -->
+            <div >
+              <p style = " color: rgb(254, 97, 123); text-decoration: solid 3px rgb(254, 97, 123) underline ; font-size: 40px; padding-left: 20px;">Contact</p>
+            </div>
+          </div>
+  
+          <div style = " padding: 20px 50px ; display: flex;">
+            <div ">
+              <p style = "font-size: 20px; color: white; text-decoration: solid 1px white underline;"><i class = "fa fa-phone"></i>
+                010-020-0840</p>
+              <p style = "font-size: 20px; color: white;text-decoration: solid 1px white underline;"><i class = "fa fa-envelope"></i>
+                GymJam@gmail.com</p>
+              <p style = "font-size: 20px; color: white;text-decoration: solid 1px white underline;"><i class = "fa fa-map-marker"></i>
+                Outer Ring Rd, AU Block, Ranikhet, Pitampura, New Delhi, Delhi, 110034</p>
+            </div>
+        </div></div>
+        
+          <div style = "padding-top: 40px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.9418702511907!2d77.13919537497593!3d28.721283175616417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0170e8096b31%3A0x9a906c658b08a033!2sVivekananda%20Institute%20of%20Professional%20Studies!5e0!3m2!1sen!2sin!4v1695470455661!5m2!1sen!2sin" frameborder="0" style="width:160%;border: solid 4px rgb(254, 97, 123); height :80% ;allowfullscreen=""></iframe>
+          </div>
+        </div>
+        <footer class="site-footer">
+          <div class="container">
+               <div class="row">
+
+                    <div class="ml-auto col-lg-4 col-md-5">
+                        <p class="copyright-text" style = "text-align: right;">Copyright &copy; GymJam Coders.
+                        
+                        <!-- <br>Design: <a href="https://www.tooplate.com">Tooplate</a></p> -->
+                    </div>
+
+                    
+                    
+               </div>
+          </div>
+     </footer>
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <!-- ------------------------- MAIN Calculator ------------------------- -->
+
+    
+
+      
+      
+
+
+
+
+    
+    <div id="myModal" class="modal">
+     
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+    
+<script src="bmi/bmi.js"></script>
+
+</body>
+</html>
