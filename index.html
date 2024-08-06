@@ -24,6 +24,22 @@ https://www.tooplate.com/view/2119-gymso-fitness
 </head>
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
 
+<!-- 	CHATBOT -->
+	<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "09302700-967c-488f-9f9e-9e39bc32ee2d", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "6030dd16-fb28-4935-95f3-a5647a5db0c2", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+	
+
     <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
